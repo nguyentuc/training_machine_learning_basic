@@ -27,7 +27,7 @@ def run_network():
                     evaluation_data=validation_data,
                     monitor_evaluation_accuracy=True)
 
-    f = open("./evaluation_other_costfunction.json","w")
+    f = open("evaluation_other_costfunction.json", "w")
     json.dump({
         "Quadratic_Cost":[vc_1, va_1, tc_1, ta_1],
         "Cross-Entropy_Cost":[vc_2, va_2, tc_2, ta_2]
@@ -35,7 +35,7 @@ def run_network():
     f.close()
 
 def make_plot():
-    f = open("./evaluation_other_costfunction.json","r")
+    f = open("evaluation_other_costfunction.json", "r")
     result = json.load(f)
     f.close()
     vc_1, va_1, tc_1, ta_1 = result["Quadratic_Cost"]

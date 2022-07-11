@@ -17,7 +17,7 @@ def y_testdata_y_predict():
     for x, y in test_data:
         y = network2.vectorized_result(y).tolist()
         y_test.append(y)
-        y_predict.append( network2.vectorized_result( np.argmax( net.feedforward(x) ) ).tolist() )
+        y_predict.append(network2.vectorized_result(np.argmax(net.feedforward(x))).tolist())
     return y_test, y_predict
 
 

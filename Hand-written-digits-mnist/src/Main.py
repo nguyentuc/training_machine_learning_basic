@@ -9,12 +9,9 @@ sys.path.append('../fig/')
 import mnist_loader
 import network
 import mnist
-import gzip
 import network2
 
 import json
-import random
-
 
 temp1, temp2, image_tests = mnist_loader.load_data()
 
